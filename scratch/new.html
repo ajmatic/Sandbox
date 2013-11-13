@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Table</title>
+		<link rel="stylesheet" type="text/css" href="/scratch/css/reset.css">
+		<link rel="stylesheet" href="/scratch/css/new.css" />
+		
+	</head>
+	<body>
+		<table id="orders">
+			<tr>
+				<th><button onclick="productFunction()">Sort</button>Product ID</th>
+				<th><button onclick="quantityFunction()">Sort</button>Quantity</th>
+				<th><button onclick="costFunction()">Sort</button>Cost</th>
+				<th><button onclick="descriptionFunction()">Sort</button>Description</th>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>10</td>
+				<td>40</td>
+				<td>black</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>20</td>
+				<td>100</td>
+				<td>blue</td>
+			</tr>
+			<tr>
+				<td>003</td>
+				<td>25</td>
+				<td>1</td>
+				<td>red</td>
+			</tr>
+			<tr>
+				<td>004</td>
+				<td>5</td>
+				<td>5</td>
+				<td>green</td>
+			</tr>
+			<tr>
+				<td>005</td>
+				<td>15</td>
+				<td>25</td>
+				<td>purple</td>
+			</tr>
+			<tr>
+				<td>006</td>
+				<td>7</td>
+				<td>10</td>
+				<td>violet</td>
+			</tr>
+			<tr>
+				<td>007</td>
+				<td>100</td>
+				<td>75</td>
+				<td>brown</td>
+			</tr>
+			<tr>
+				<td>008</td>
+				<td>12</td>
+				<td>18</td>
+				<td>orange</td>
+			</tr>
+			<tr>
+				<td>009</td>
+				<td>40</td>
+				<td>105</td>
+				<td>yellow</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>9</td>
+				<td>22</td>
+				<td>indigo</td>
+			</tr>
+		</table>
+
+			<p id="demo">Click the button to sort the array.</p>
+			
+			
+			<script>
+
+				function productFunction()
+				{
+					var points = getRowValues(0); 
+					console.log(points);
+					points.sort(function(a,b){return a-b});
+					var x=document.getElementById("demo");
+					x.innerHTML=points;
+				}
+
+				function quantityFunction()
+				{
+					var points = [10,20,25,5,15,7,100,12,40,9];
+					points.sort(function(a,b){return b-a});
+					var x=document.getElementById("demo");
+					x.innerHTML=points;
+				}
+
+				function costFunction()
+				{
+					var points = [40,100,1,5,25,10,75,18,105,22];
+					points.sort(function(a,b){return b-a});
+					var x=document.getElementById("demo");
+					x.innerHTML=points;
+				}					
+
+				function descriptionFunction()
+				{
+					var names = [
+						"black", 
+						"blue",
+						"red",
+						"green",
+						"purple",
+						"violet",
+						"brown",
+						"orange",
+						"yellow",
+						"indigo"
+					];
+					names.sort(function(a,b){return b-a});
+					var x=document.getElementById("demo");
+					x.innerHTML=names;
+				}
+
+				function getRowValues(column){
+					var order_table = document.getElementById("orders"),
+						rows = order_table.getElementsByTagName("tr"), 
+						td = new Array();
+					for (var i = 0; i < rows.length; i++){
+						if (i != 0){
+							td.push(rows[i].children[column].innerHTML);
+						}
+					}
+					return td;
+				}
+
+
+
+				/*var userChoice = prompt("Do you choose rock, paper or scissors?");
+				var computerChoice = Math.random();
+				if (computerChoice < 0.34) {
+					computerChoice = "rock";
+				} else if(computerChoice <= 0.67) {
+					computerChoice = "paper";
+				} else {
+					computerChoice = "scissors";
+				}
+
+
+				var compare = function(choice1, choice2) {
+				    if (choice1 == choice2) {
+				        return ("The result is a tie!");
+				    }
+				    if (choice1 == "rock") {
+				        if(choice2 == "scissors"){
+				        return ("rock wins");
+				        } else {
+				            return ("paper wins");
+				        }
+				    }
+				    
+				    if (choice1 == "paper") {
+				        if (choice2 == "scissors"){
+				            return ("scissors wins");
+				        } else {
+				            return ("paper wins");
+				        }
+				    }
+				    
+				    if (choice1 == "scissors") {
+				        if (choice2 == "rock") {
+				            return ("rock wins");
+				        } else {
+				            return ("scissors wins");
+				        }
+				    }
+				    
+
+				};
+
+    			var answer = compare(userChoice,computerChoice);
+    			document.write(answer);*/
+
+    			for (var counter = 1; counter < 10; counter = counter + 1) {
+    				console.log(counter);
+    				document.write(counter);
+    			}
+
+			
+
+			</script>
+
+			
+			
+	</body>
+</html>
