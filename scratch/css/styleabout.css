@@ -1,37 +1,12 @@
-body {
-	width: 75%;
-	margin: 0 auto; 
-}
-
-h1 {
-	text-shadow: 1px 1px 1px gray,
-	2px 2px 1px #000099,
-	3px 3px 1px #CC0000;
-	font-size: 70px;
-	font-family: 'Norican', cursive;
-	margin: 0;
-	padding-top: 30px;
-}
-
-#lockup {
+.block {
+	width: 33%;
 	display: inline-block;
+	text-align: center;
 }
 
-p {
-	width: 300px;
+.block img {
+	width: 16rem;
+	height: 12rem;
 }
 
-.guitarpic {
-	width: 155px;
-	height: 180px;
-	float: right;
-}
 
-#nav {
-	float: right;
-}
-
-#nav li {
-	display: inline-block;
-	padding-left: 20px;
-}
