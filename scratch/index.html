@@ -5,18 +5,42 @@
 		<meta charset="utf-8">
 		<title>hello</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/textBoxes.css">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		
 	</head>
 	<body>
-		<div id="header">
-			<h1>Hello World!</h1>
+		<h1>Inner HTML demo</h1>
+		<form action="">
+			<fieldset>
+				<label>Type your name: </label>
+				<input type="text" id="txtName" />
+				<button type="button" onclick="sayHi()">
+					Click Me
+				</button>
+				
+			</fieldset>
+		</form>
+
+		<div id="divOutput">
+			Watch this space.
+			
 		</div>
+		<script type="text/javascript">
+			function sayHi(){
+				var txtName = document.getElementById("txtName");
+				divOutput = document.getElementById("divOutput");
+
+				name = txtName.value;
+				divOutput.innerHTML = " " + name + " ";
+				divOutput.innerHTML += " is a very nice name";
+			}
+		</script>
+		
 
 
-		<script type=text/javascript>
+		<!--<script type=text/javascript>
 
 			/*var die = Math.ceil(Math.random() * 6);
 			var die2 = Math.ceil(Math.random() * 6);
@@ -89,14 +113,39 @@
 		    }
 		    main();*/
 
-		    
+		   /*function Critter(Name1, Age1){
+		   	this.name = Name1;
+		   	this.age = Age1;
+		   	this.talk = function(){
+		   		msg = "Hi my name is " + this.name;
+		   		msg += " and I'm " + this.age;
+		   		alert(msg);
+		   	}
+		   }
+		   function main(){
+		   	critterA = new Critter("Alpha", 1);
+		   	critterB = new Critter("beta", 2);
+		   	critterB.name = "charlie";
+		   	critterB.age = 3;
+		   	critterC = new Critter("Delta", 4);
+		   	critterC.age = 5;
+		   critterA.talk();
+		   critterB.talk();
+		   critterC.talk();
 
+		   
+		   	
+			}
+
+			main();*/
+
+			
 			
 
 
 
 
-		</script>
+		</script>-->
 					
 		
 	</body>	
