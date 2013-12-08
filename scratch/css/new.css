@@ -1,16 +1,15 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: bold;
+#surface {
+  background-color: #FFFF00;
+  border: black 5px double;
+  height: 400px;
+  width: 400px;
 }
-
-table, th, td {
-	border: 2px solid black;	
+#controls {
+  position: absolute;
+  top: 500px;
 }
-
-body {
-	background-color: #D4D4BF;
+#output {
+  position: absolute;
+  top: 500px;
+  left: 200px;
 }

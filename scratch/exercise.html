@@ -3,50 +3,70 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>The Beauty Blog</title>
+		<title>Exercise</title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
 		<link rel="stylesheet" href="css/exercise.css">
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript">
+			function fight(){
+
+				var weapon = document.getElementsByName("weapon");
+
+				for (i = 0; i < weapon.length; i++){
+					currentWeapon = weapon[i];
+				
+
+				if (currentWeapon.checked){
+					var selectedWeapon = currentWeapon.value;
+					}
+				}
+			
+
+			var output = document.getElementById("output");
+			var response = "<h2>You defeated the dragon with a ";
+			response += selectedWeapon + "<\/h2> \n";
+
+			output.innerHTML = response;
+			}
+		</script>
 	</head>
 
 
 	<body>
 		
-		<div id="page">
-			<div class="blog">
-				<h1 class="lede">Recently in <a href="#">The Beauty Blog</a></h1>
-				
-				<div class="main">
-					<div id="date">
-					August 24
-					</div>
-					What's Happening In Fashion?
-				</div>
+		<h1>With what weapon will you fight the dragon?</h1>
+		<form action="">
+			<fieldset>
+				<input type="radio" 
+					   name="weapon" 
+				       id="radSpoon" 
+				       value="spoon" 
+				       checked="checked" />
+				<label for="radSpoon">Spoon</label>
 
-				<div class="other">
-					Recent Articles
-				</div>
+				<input type="radio" 
+				       name="weapon" 
+				       id="radFlower"
+				       value="flower" />
+				<label for="radFlower">Flower</label>
 
-				<div id="nav">
-					<ul>
-						<a href=""><li>home</li></a>
-						<a href=""><li>about</li></a>
-						<a href=""><li>sample</li></a>
-						<a href=""><li>contact</li></a>
-					</ul>
-				</div>
-			
-			</div>
+				<input type="radio" 
+				       name="weapon" 
+				       id="radNoodle" 
+				       value="wet noodle" />
+				<label for="radNoodle">Wet Noodle</label>
+
+				<button type="button" onclick="fight()">
+					Fight the Dragon
+				</button>
+			</fieldset>
+		</form>
+		<div id="output">
 
 		</div>
-		
-	
-		<script type="text/javascript">
-		
-		</script>
-		
 
+		
 
 	</body>	
 
